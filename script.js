@@ -13,6 +13,10 @@ function onButtonClick() {
     // Getting Battery Service...
     return server.getPrimaryService(0xfee8);
   })
+  .then(service => {
+    // Getting Battery Level Characteristic...
+    console.log('> Service 0xfee8:               ' + service);
+  })
   .catch(error => {
     console.log('Argh! ' + error);
   });
