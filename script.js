@@ -2,7 +2,7 @@ function onButtonClick() {
   
   console.log('Requesting Bluetooth Device...');
 
-  navigator.bluetooth.requestDevice({acceptAllDevices: true} /*{ filters: [{ services: [0xfee8, 0xfee9] }] }*/)
+  navigator.bluetooth.requestDevice(/*{acceptAllDevices: true}*/ { filters: [{ services: [0xfee8, 0xfee9] }] } )
   .then(device => {
     console.log('> Name:             ' + device.name);
     console.log('> Id:               ' + device.id);
