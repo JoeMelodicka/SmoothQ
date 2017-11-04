@@ -15,7 +15,7 @@ function onButtonClick() {
   })
   .then(service => {
     // Getting Battery Level Characteristic...
-    console.log('> Service 0xfee8:               ' + service);
+    console.log(service);
   })
   .catch(error => {
     console.log('Argh! ' + error);
