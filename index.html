@@ -22,6 +22,15 @@ Await)</a> sample.</p>
   <input id="namePrefix" type="text" size=17 placeholder="Device Name Prefix">
   <button>Get Bluetooth Device Info</button>
 </form>
-  
+  <script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    if (isWebBluetoothEnabled()) {
+      ChromeSamples.clearLog();
+      onButtonClick();
+    }
+  });
+</script>
 </body>
 </html>
