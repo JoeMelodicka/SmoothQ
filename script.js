@@ -11,11 +11,19 @@ function onButtonClick() {
   })
   .then(server => {
     // Getting Battery Service...
-    return server.getPrimaryService(0xfee8);
+    return server.getPrimaryService(0xfee9);
   })
   .then(service => {
     // Getting Battery Level Characteristic...
-    console.log(service);
+    
+    return service.getCharacteristic('d44bc439-abfd-45a2-b575-925416129610');
+  })
+  .then(characteristic => {
+    console.log(characteristic);
+    return characteristic.readValue();
+  })
+  .then(value => {
+    console.log(value);
   })
   .catch(error => {
     console.log('Argh! ' + error);
