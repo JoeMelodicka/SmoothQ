@@ -26,15 +26,15 @@ function onButtonClick() {
     options.filters = filters;
   }
 
-  log('Requesting Bluetooth Device...');
-  log('with ' + JSON.stringify(options));
+  console.log('Requesting Bluetooth Device...');
+  console.log('with ' + JSON.stringify(options));
   navigator.bluetooth.requestDevice(options)
   .then(device => {
-    log('> Name:             ' + device.name);
-    log('> Id:               ' + device.id);
-    log('> Connected:        ' + device.gatt.connected);
+    console.log('> Name:             ' + device.name);
+    console.log('> Id:               ' + device.id);
+    console.log('> Connected:        ' + device.gatt.connected);
   })
   .catch(error => {
-    log('Argh! ' + error);
+    console.log('Argh! ' + error);
   });
 }
