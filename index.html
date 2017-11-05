@@ -37,6 +37,10 @@
   <button id="mode3Button" disabled>Mode 3 (Full)</button>
 </p>
 
+<p>
+  <button id="testButton">Test</button>
+</p>
+
 
 
 <script>
@@ -52,6 +56,9 @@
   });
   document.querySelector('#mode3Button').addEventListener('click', function() {
     onModeButtonClick(3);
+  });
+  document.querySelector('#testButton').addEventListener('click', function() {
+    onTestButtonClick();
   });
 </script>
 

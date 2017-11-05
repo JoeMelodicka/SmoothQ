@@ -66,5 +66,11 @@ function onModeButtonClick(mode) {
       break;
     default:
       console.log('You fucked something up...');
+  }
 }
+
+function onTestButtonClick() {
+  for(let i=0;i<100;i++) {
+    blueCharacteristic.writeValue(hexToArrayBuffer('0681270001757e061001080068bb'));
+  }
 }
