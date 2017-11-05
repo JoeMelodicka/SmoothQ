@@ -4,17 +4,12 @@
 <script src="script.js"></script>
   
 <h1>Trololololo</h1>
-<h2>This is heading 2</h2>
-<h3>This is heading 3</h3>
-<h4>This is heading 4</h4>
-<h5>This is heading 5</h5>
-<h6>This is heading 6</h6>
 
   <p>This sample illustrates the use of the Web Bluetooth API to retrieve basic
 device information from a nearby Bluetooth Low Energy Device. You may want to
-check out the <a href="device-info-async-await.html">Device Info (Async
-Await)</a> sample.</p>
+check out the sample.</p>
 
+<!--
 <form>
   <label for="allDevices">All Devices</label>
   <input id="allDevices" type="checkbox">
@@ -27,11 +22,40 @@ Await)</a> sample.</p>
   document.querySelector('form').addEventListener('submit', function(event) {
     event.stopPropagation();
     event.preventDefault();
-   
       
       onButtonClick();
     
   });
 </script>
+-->
+<p>
+  <button id="connectButton">Connect to Smooth Q</button>
+</p>
+
+
+<p>
+  <button id="mode1Button" disabled>Mode 1 (Pan)</button>
+  <button id="mode2Button" disabled>Mode 2 (Lock)</button>
+  <button id="mode3Button" disabled>Mode 3 (Full)</button>
+</p>
+
+
+
+<script>
+  document.querySelector('#connectButton').addEventListener('click', function() {
+    onConnectButtonClick();
+  });
+
+  document.querySelector('#mode1Button').addEventListener('click', function() {
+    onModeButtonClick(1);
+  });
+  document.querySelector('#mode2Button').addEventListener('click', function() {
+    onModeButtonClick(2);
+  });
+  document.querySelector('#mode3Button').addEventListener('click', function() {
+    onModeButtonClick(3);
+  });
+</script>
+
 </body>
 </html>
