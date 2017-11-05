@@ -69,8 +69,21 @@ function onModeButtonClick(mode) {
   }
 }
 
-function onTestButtonClick() {
-  for(let i=0;i<100;i++) {
-    blueCharacteristic.writeValue(hexToArrayBuffer('0681270001757e061001080068bb'));
+function repeating (asdasd) {
+  blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
+  if(asdasd > 100) {
+    return;
   }
+  setTimeout(function(){ 
+
+    repeating(asdasd-1)
+  }, 100); 
+}
+
+function onTestButtonClick() {
+  
+  
+
+  let asd = 0;
+   repeating(asd);
 }
