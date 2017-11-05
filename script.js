@@ -59,12 +59,15 @@ function onModeButtonClick(mode) {
   switch(mode) {
     case 1:
       blueCharacteristic.writeValue(hexToArrayBuffer('0681270000655f061001080068bb'));
+      console.log("Mode 1.");
       break;
     case 2:
       blueCharacteristic.writeValue(hexToArrayBuffer('061003080006db0681270001757e'));
+      console.log("Mode 2.");
       break;
     case 3:
       blueCharacteristic.writeValue(hexToArrayBuffer('061003080006db0681270002451d'));
+      console.log("Mode 3.");
       break;
     default:
       console.log('You fucked something up...');
@@ -90,12 +93,18 @@ async function onTestButtonClick() {
   blueCharacteristic.writeValue(hexToArrayBuffer('061001080068bb061002080031eb'))*/
 
   try {
-    log('asdasdas');
-    await blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'))
+    console.log('asdasdas');
+    //await blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
 
-    log('asd: ');
+    for (let i = 1; i <= 1000; i++) {
+      console.log('asd: ');
+      await blueCharacteristic.writeValue(hexToArrayBuffer('061002080031eb0610030e957f61')); //it moves to the left
+    }
+    //await blueCharacteristic.writeValue(hexToArrayBuffer('061001080068bb061002080031eb'));
+
+    console.log('asd: ');
   } catch(error) {
-    log('Argh! ' + error);
+    console.log('Argh! ' + error);
   }
 
   /*let asd = 0;
