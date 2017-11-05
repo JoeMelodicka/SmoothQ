@@ -68,7 +68,7 @@ function onModeButtonClick(mode) {
       console.log('You fucked something up...');
   }
 }
-
+/*
 function repeating (asdasd) {
   blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
   if(asdasd > 100) {
@@ -78,12 +78,12 @@ function repeating (asdasd) {
 
     repeating(asdasd-1)
   }, 100); 
-}
+}*/
 
 function onTestButtonClick() {
-  
+  blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
   
 
-  let asd = 0;
-   repeating(asd);
+  /*let asd = 0;
+   repeating(asd);*/
 }
