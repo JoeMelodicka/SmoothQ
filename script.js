@@ -52,7 +52,7 @@ function onConnectButtonClick() {
   });
 }
 
-function onConnectButtonClick(mode) {
+function onModeButtonClick(mode) {
   switch(mode) {
     case 1:
       characteristic.writeValue(hexToArrayBuffer('0681270000655f061001080068bb'));
