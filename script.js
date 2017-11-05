@@ -45,6 +45,8 @@ function onConnectButtonClick() {
     document.querySelector('#mode1Button').disabled = !blueCharacteristic.properties.write;
     document.querySelector('#mode2Button').disabled = !blueCharacteristic.properties.write;
     document.querySelector('#mode3Button').disabled = !blueCharacteristic.properties.write;
+
+    console.log("connected.");
     // Writing 1 is the signal to reset energy expended.
     //return characteristic.writeValue(hexToArrayBuffer('0681270000655f061001080068bb'));
   })
@@ -80,9 +82,21 @@ function repeating (asdasd) {
   }, 100); 
 }*/
 
-function onTestButtonClick() {
-  blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
-  
+async function onTestButtonClick() {
+  console.log("trololo");
+  /*
+  blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'))
+  blueCharacteristic.writeValue(hexToArrayBuffer('061002080031eb0610030e957f61'))
+  blueCharacteristic.writeValue(hexToArrayBuffer('061001080068bb061002080031eb'))*/
+
+  try {
+    log('asdasdas');
+    await blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'))
+
+    log('asd: ');
+  } catch(error) {
+    log('Argh! ' + error);
+  }
 
   /*let asd = 0;
    repeating(asd);*/
