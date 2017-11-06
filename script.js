@@ -95,11 +95,17 @@ async function onMoveButtonClick(moving) {
   
 
   /*
-    VALUES:
+    VALUES (FAKE):
     061002080031eb0610030e957f61 RIGHT
     061002080031eb0610030176a212 LEFT
     061003080006db0610010176cc72 DOWN
     061003080006db0610010e7d6d27 UP
+
+    VALUES (REAL):
+    061001012c37cd DOWN
+    0610010ed449e4 UP
+    061002012c6e9d LEFT
+    0610020ed410b4 RIGHT
   */
 
   
@@ -108,16 +114,16 @@ async function onMoveButtonClick(moving) {
     //await blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
     switch(moving) {
       case 'R':
-        msg = '061002080031eb0610030e957f61';
+        msg = '0610020ed410b4';
         break;
       case 'L':
-        msg = '061002080031eb0610030176a212';
+        msg = '061002012c6e9d';
         break;
       case 'D':
-        msg = '061003080006db0610010176cc72';
+        msg = '061001012c37cd';
         break;
       case 'U':
-        msg = '061003080006db0610010e89c2bc';
+        msg = '0610010ed449e4';
         break;
       case 'Test':
         msg = 'trololo';
