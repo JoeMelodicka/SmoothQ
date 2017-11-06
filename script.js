@@ -98,7 +98,8 @@ async function onMoveButtonClick(moving) {
     VALUES:
     061002080031eb0610030e957f61 RIGHT
     061002080031eb0610030176a212 LEFT
-  
+    061003080006db0610010176cc72 DOWN
+    061003080006db0610010e7d6d27 UP
   */
 
   
@@ -111,6 +112,12 @@ async function onMoveButtonClick(moving) {
         break;
       case 'L':
         msg = '061002080031eb0610030176a212';
+        break;
+      case 'D':
+        msg = '061003080006db0610010176cc72';
+        break;
+      case 'U':
+        msg = '061003080006db0610010e7d6d27';
         break;
       case 'Test':
         msg = 'trololo';

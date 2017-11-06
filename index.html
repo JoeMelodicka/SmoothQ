@@ -42,6 +42,8 @@
   <button id="testButton">TEST</button>
   <button id="leftButton">Left</button>
   <button id="rightButton">Right</button>
+  <button id="upButton">Up</button>
+  <button id="downButton">Down</button>
 </p>
 
 
@@ -65,6 +67,12 @@
   });
   document.querySelector('#rightButton').addEventListener('click', function() {
     onMoveButtonClick('R');
+  });
+  document.querySelector('#upButton').addEventListener('click', function() {
+    onMoveButtonClick('U');
+  });
+  document.querySelector('#downButton').addEventListener('click', function() {
+    onMoveButtonClick('D');
   });
   document.querySelector('#testButton').addEventListener('click', function() {
     onMoveButtonClick('Test');
