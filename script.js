@@ -96,8 +96,8 @@ async function onMoveButtonClick(moving) {
 
   /*
     VALUES:
-    061002080031eb0610030e957f61 LEFT
-    061002080031eb0610030176a212 RIGHT
+    061002080031eb0610030e957f61 RIGHT
+    061002080031eb0610030176a212 LEFT
   
   */
 
@@ -106,19 +106,21 @@ async function onMoveButtonClick(moving) {
     //console.log('asdasdas');
     //await blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
     switch(moving) {
-      case 'L':
+      case 'R':
         msg = '061002080031eb0610030e957f61';
         break;
-      case 'R':
+      case 'L':
         msg = '061002080031eb0610030176a212';
+        break;
+      case 'Test':
+        msg = 'trololo';
         break;
     }
 
-    for (let i = 1; i <= 3200; i++) {
+    for (let i = 1; i <= 500; i++) {
       //console.log('asd: ');
-      await blueCharacteristic.writeValue(hexToArrayBuffer(msg)); //it moves to the left
+      await blueCharacteristic.writeValue(hexToArrayBuffer(msg)); //it moves!
     }
-    //await blueCharacteristic.writeValue(hexToArrayBuffer('061001080068bb061002080031eb'));
 
     //console.log('asd: ');
   } catch(error) {

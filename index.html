@@ -2,8 +2,9 @@
 <html>
 <body>
 <script src="script.js"></script>
-  
-<h1>Trololololo</h1>
+
+<title>Smooth Qntrol by Joe Melodicka</title>
+<h1>Smooth Qntrol</h1>
 
   <p>blablabla.</p>
 
@@ -38,6 +39,7 @@
 </p>
 
 <p>
+  <button id="testButton">TEST</button>
   <button id="leftButton">Left</button>
   <button id="rightButton">Right</button>
 </p>
@@ -63,6 +65,9 @@
   });
   document.querySelector('#rightButton').addEventListener('click', function() {
     onMoveButtonClick('R');
+  });
+  document.querySelector('#testButton').addEventListener('click', function() {
+    onMoveButtonClick('Test');
   });
 </script>
 
