@@ -85,24 +85,42 @@ function repeating (asdasd) {
   }, 100); 
 }*/
 
-async function onTestButtonClick() {
-  console.log("trololo");
+async function onMoveButtonClick(moving) {
+  let msg = null;
+  //console.log("trololo");
   /*
   blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'))
   blueCharacteristic.writeValue(hexToArrayBuffer('061002080031eb0610030e957f61'))
   blueCharacteristic.writeValue(hexToArrayBuffer('061001080068bb061002080031eb'))*/
+  
 
+  /*
+    VALUES:
+    061002080031eb0610030e957f61 LEFT
+    061002080031eb0610030176a212 RIGHT
+  
+  */
+
+  
   try {
-    console.log('asdasdas');
+    //console.log('asdasdas');
     //await blueCharacteristic.writeValue(hexToArrayBuffer('0610030e957f61061001080068bb'));
+    switch(moving) {
+      case 'L':
+        msg = '061002080031eb0610030e957f61';
+        break;
+      case 'R':
+        msg = '061002080031eb0610030176a212';
+        break;
+    }
 
-    for (let i = 1; i <= 1000; i++) {
-      console.log('asd: ');
-      await blueCharacteristic.writeValue(hexToArrayBuffer('061002080031eb0610030e957f61')); //it moves to the left
+    for (let i = 1; i <= 3200; i++) {
+      //console.log('asd: ');
+      await blueCharacteristic.writeValue(hexToArrayBuffer(msg)); //it moves to the left
     }
     //await blueCharacteristic.writeValue(hexToArrayBuffer('061001080068bb061002080031eb'));
 
-    console.log('asd: ');
+    //console.log('asd: ');
   } catch(error) {
     console.log('Argh! ' + error);
   }
