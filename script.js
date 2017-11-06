@@ -117,7 +117,7 @@ async function onMoveButtonClick(moving) {
         msg = '061003080006db0610010176cc72';
         break;
       case 'U':
-        msg = '061003080006db0610010e7d6d27';
+        msg = '061003080006db0610010e89c2bc';
         break;
       case 'Test':
         msg = 'trololo';
